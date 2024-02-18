@@ -1,13 +1,14 @@
 Summary:	Meta-loader for Vulkan
 Summary(pl.UTF-8):	Meta-loader dla Vulkana
 Name:		vulkan-volk
-Version:	1.3.270
+Version:	1.3.275
+%define	gitref	vulkan-sdk-%{version}
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/zeux/volk/releases
-Source0:	https://github.com/zeux/volk/archive/%{version}/volk-%{version}.tar.gz
-# Source0-md5:	4910754de96575f55b58eb5d9a22db16
+Source0:	https://github.com/zeux/volk/archive/%{gitref}/volk-%{gitref}.tar.gz
+# Source0-md5:	a18ec3f8502a079bb725ca56ef4fe47c
 URL:		https://github.com/zeux/volk
 BuildRequires:	cmake >= 3.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -56,7 +57,7 @@ punkty wejściowe Vulkana bezpośrednio ze sterownika, co może zwiększyć
 wydajność poprzez pominięcie narzutu przekazywania w loaderze.
 
 %prep
-%setup -q -n volk-%{version}
+%setup -q -n volk-%{gitref}
 
 %build
 install -d build
