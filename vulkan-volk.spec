@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Meta-loader dla Vulkana
 Name:		vulkan-volk
 Version:	1.3.275
 %define	gitref	vulkan-sdk-%{version}
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/zeux/volk/releases
@@ -12,6 +12,8 @@ Source0:	https://github.com/zeux/volk/archive/%{gitref}/volk-%{gitref}.tar.gz
 URL:		https://github.com/zeux/volk
 BuildRequires:	cmake >= 3.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_enable_debug_packages	0
 
 %description
 volk is a meta-loader for Vulkan. It allows you to dynamically load
